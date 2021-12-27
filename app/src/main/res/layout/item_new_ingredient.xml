@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toEndOf="@id/iv_ingredient"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="26dp"
         android:layout_marginLeft="14dp"
         android:orientation="vertical">
 
@@ -54,5 +54,16 @@
             android:textSize="16sp"
             tools:text="Ingredient category" />
     </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="14dp"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

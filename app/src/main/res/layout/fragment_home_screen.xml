@@ -11,7 +11,7 @@
         android:id="@+id/tab_secondary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="9dp"
         android:layout_marginLeft="14dp"
         android:layout_marginRight="14dp"
         app:tabMode="scrollable"
@@ -72,18 +72,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         tools:listitem="@layout/item_ingredient" />
 
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
+    <Button
+        android:id="@+id/btn_open_bottom_sheet"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/icon_add"
-        android:backgroundTint="@color/yellow"
-        app:rippleColor="@color/white"
-        app:tint="@color/white"
-        android:layout_margin="16dp"
+        android:text="Add ingredient"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        android:layout_marginBottom="20dp"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
