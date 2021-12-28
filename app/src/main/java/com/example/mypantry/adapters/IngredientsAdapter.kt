@@ -28,7 +28,7 @@ class IngredientsAdapter (ingredients: List<Ingredient>) :
 
     override fun onBindViewHolder(holder: IngredientsViewHolder, position: Int) {
         val ingredients = ingredients[position]
-        //holder.bind(ingredients)
+        holder.bind(ingredients)
     }
 
     override fun getItemCount(): Int = ingredients.size
