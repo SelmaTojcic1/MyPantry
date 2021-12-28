@@ -1,4 +1,4 @@
-package com.example.mypantry.data
+package com.example.mypantry.data.database
 
 import androidx.room.Room
 import com.example.mypantry.MyPantry
@@ -19,7 +19,8 @@ object IngredientsDatabaseBuilder {
     private fun buildDatabase(): IngredientsDatabase {
         return Room.databaseBuilder(
             MyPantry.application, IngredientsDatabase::class.java,
-            IngredientsDatabase.NAME)
+            IngredientsDatabase.NAME
+        )
 
             .fallbackToDestructiveMigration()
             .allowMainThreadQueries()

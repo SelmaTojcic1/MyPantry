@@ -20,40 +20,20 @@
         app:shapeAppearanceOverlay="@style/roundedImageView"
         tools:src="@drawable/food" />
 
-    <LinearLayout
-        android:id="@+id/linear_layout"
+    <TextView
+        android:id="@+id/tv_new_ingredient_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="24dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        tools:text="Ingredient name"
         app:layout_constraintStart_toEndOf="@id/iv_ingredient"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="26dp"
-        android:layout_marginLeft="14dp"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/tv_ingredient_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="24dp"
-            android:ellipsize="end"
-            android:maxLines="1"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            tools:text="Ingredient name" />
-
-        <TextView
-            android:id="@+id/tv_ingredient_category"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="24dp"
-            android:ellipsize="end"
-            android:maxLines="1"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            tools:text="Ingredient category" />
-    </LinearLayout>
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
     <Button
         android:id="@+id/btn_add"

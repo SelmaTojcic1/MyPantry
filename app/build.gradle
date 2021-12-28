@@ -1,12 +1,12 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
-    id 'androidx.navigation.safeargs'
     id 'kotlin-kapt'
 }
 
 android {
     compileSdk 32
+    buildToolsVersion "30.0.3"
 
     buildFeatures{
         viewBinding = true
@@ -36,9 +36,6 @@ android {
         jvmTarget = '1.8'
     }
 
-    viewBinding {
-        enabled = true
-    }
 }
 
 dependencies {
