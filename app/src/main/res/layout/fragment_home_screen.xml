@@ -21,7 +21,7 @@
         tools:listitem="@layout/item_ingredient" />
 
     <Button
-        android:id="@+id/btn_open_bottom_sheet"
+        android:id="@+id/btn_open_add_ingredient_fragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add ingredient"

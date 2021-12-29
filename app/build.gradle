@@ -8,9 +8,11 @@ android {
     compileSdk 32
     buildToolsVersion "30.0.3"
 
-    buildFeatures{
-        viewBinding = true
+
+    dataBinding {
+        enabled = true
     }
+
 
     defaultConfig {
         applicationId "com.example.mypantry"
@@ -34,6 +36,10 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+
+    buildFeatures{
+        viewBinding  true
     }
 
 }

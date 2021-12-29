@@ -1,17 +1,18 @@
 package com.example.mypantry.ui.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.mypantry.R
 import com.example.mypantry.adapters.IngredientsAdapter
 import com.example.mypantry.data.database.IngredientsDatabaseBuilder
 import com.example.mypantry.data.repository.IngredientsRepository
 import com.example.mypantry.databinding.FragmentHomeScreenBinding
-import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.example.mypantry.ui.addingredient.AddIngredientActivity
+
 
 class HomeScreenFragment : Fragment() {
 
@@ -31,17 +32,21 @@ class HomeScreenFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        homeScreenBinding = FragmentHomeScreenBinding.inflate(inflater, container, false)
+        homeScreenBinding =
+            FragmentHomeScreenBinding.inflate(inflater, container, false)
 
         setupRecyclerView()
 
-        homeScreenBinding.btnOpenBottomSheet.setOnClickListener {
-            val dialog = BottomSheetDialog(requireContext())
-            val view=layoutInflater.inflate(R.layout.bottom_sheet_dialog_layout,null)
-            dialog.setContentView(view)
-            dialog.show()
-        }
+
+
         return homeScreenBinding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        homeScreenBinding.btnOpenAddIngredientFragment.setOnClickListener{
+            startActivity(Intent(requireContext(),AddIngredientActivity::class.java))
+        }
     }
 
     override fun onResume() {
@@ -54,7 +59,8 @@ class HomeScreenFragment : Fragment() {
         homeScreenBinding.rvIngredients.layoutManager = LinearLayoutManager (
             context, LinearLayoutManager.VERTICAL, false)
 
-        homeScreenBinding.rvIngredients.adapter = IngredientsAdapter(ingredientsRepository.getIngredients())
+        homeScreenBinding.rvIngredients.adapter =
+            IngredientsAdapter(ingredientsRepository.getIngredients())
 
     }
 

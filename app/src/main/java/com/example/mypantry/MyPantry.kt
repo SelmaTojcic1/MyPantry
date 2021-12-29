@@ -10,7 +10,7 @@ class MyPantry : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        application = this
+        application = this@MyPantry
         //koin
     }
 }
