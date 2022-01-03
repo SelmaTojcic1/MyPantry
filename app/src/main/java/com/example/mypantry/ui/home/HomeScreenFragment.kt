@@ -37,8 +37,6 @@ class HomeScreenFragment : Fragment() {
 
         setupRecyclerView()
 
-
-
         return homeScreenBinding.root
     }
 
